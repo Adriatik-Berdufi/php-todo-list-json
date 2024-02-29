@@ -1,0 +1,68 @@
+:root {
+  --header-height: 90px;
+  --footer-height: 90px;
+  
+}
+
+/** Reset **/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, sans-serif;
+}
+img {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+body{
+  background-color: rgba(212, 200, 184, 0.856);
+}
+
+/** Utils **/
+
+.container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.brd{
+  border: 2px dashed black;
+}
+
+
+
+/** HEADER **/
+.header {
+  min-height: var(--header-height);
+  background-color: rgb(130, 64, 40);
+}
+
+
+
+/** MAIN **/
+.box{
+  min-height: 560px;
+}
+.card-body li{
+  background-color: rgb(212, 212, 212);
+  border-radius: 0.5rem;
+}
+
+
+/** FOOTER **/
+.footer {
+  min-height: var(--footer-height);
+  background-color: goldenrod;
+}
