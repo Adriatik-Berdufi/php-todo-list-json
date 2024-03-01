@@ -3,26 +3,8 @@ const app = createApp({
     data(){
         return{
             title: 'Todo List',
-            todoList: [
-              /*   {   value: "opsion1",
-                    done: true,
-                },
-                {   value: "opsion2",
-                    done: true,
-                },
-                {   value: "opsion3",
-                    done: true,
-                },
-                {   value: "opsion4",
-                    done: true,
-                },
-                {   value: "opsion5",
-                    done: true,
-                },
-                {   value: "opsion6",
-                    done: true,
-                } */
-            ],
+            todoList: [],
+            newItem:{ value:'',done:false},
         };
     },
     methods: {
@@ -31,7 +13,15 @@ const app = createApp({
              
               .then((response) => this.todoList = response.data)
           },
-          
+        fetchsaveNewItem(){
+            if(this.newItem.value.length == 0) return;
+
+            axios.post('../backend/api/add-item.php',{value: this.newItem.value})
+                .then((response) => {
+                    this.todoList = response.data;
+                    this.newItem.value = '';
+                })
+        }
     },
     mounted(){ 
         this.fetchTaskList();
