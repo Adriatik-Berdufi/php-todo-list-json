@@ -37,23 +37,23 @@
 					</div>
 						<div class="card-body">
 							<ul class="px-3">
-								<li v-for="item in todoList" class="fs-5 p-2 m-2 ">{{item.value}}</li>
-								<!-- <li v-for="(item, index) in todoList" class="fs-5 p-2 m-2 ">
+								
+								<li v-for="(item, index) in todoList" class="fs-5 p-2 m-2 ">
 								<div v-if="(item.done)" class="d-flex justify-content-between align-items-center">
-									<div class="w-75 text-start text-decoration-line-through">{{item.text}}</div>
+									<div class="w-75 text-start text-decoration-line-through">{{item.value}}</div>
 									<div class="">
-									<i @click="doneItem(item)" class="bi bi-check2-circle p-2 text-success"></i>
-									<i @click="deleteItem(index)" class="bi bi-trash3 p-2 text-danger"></i>
+									<!-- <i @click="doneItem(item)" class="bi bi-check2-circle p-2 text-success"></i> -->
+									<i @click="deleteItem(item,index)" class="bi bi-trash3 p-2 text-danger"></i>
 									</div>
 								</div>
 								<div v-if="(!item.done)" class="d-flex justify-content-between align-items-center">
-									<div class="w-75 text-start">{{item.text}}</div>
+									<div class="w-75 text-start">{{item.value}}</div>
 									<div class="">
-									<i @click="doneItem(item)" class="bi bi-check2-circle p-2  text-danger"></i>
-									<i @click="deleteItem(index)" class="bi bi-trash3 p-2 text-danger"></i>
+									<!-- <i @click="doneItem(item)" class="bi bi-check2-circle p-2  text-danger"></i> -->
+									<i @click="deleteItem(item,index)" class="bi bi-trash3 p-2 text-danger"></i>
 									</div>
 								</div>
-								</li> -->
+								</li>
 							</ul>
 						<button @click="fetchdeleteAll()" type="button" class="btn btn-danger mt-5"><i class="bi bi-trash3 pe-2"></i>Delete All</button>
 					</div>

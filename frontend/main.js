@@ -27,6 +27,13 @@ const app = createApp({
                 .then((response) => this.todoList = response.data)
                 .catch((error) => console.error('Errore nella richiesta delete-all:', error));
         },
+        deleteItem(item, index) {
+            axios.post('../backend/api/delete-item.php', { item, index })
+                .then((response) => {
+                    this.todoList = response.data;
+                })
+                
+        }
     },
     mounted(){ 
         this.fetchTaskList();
