@@ -21,7 +21,12 @@ const app = createApp({
                     this.todoList = response.data;
                     this.newItem.value = '';
                 })
-        }
+        },
+        fetchdeleteAll() {
+            axios.get('../backend/api/delete-all.php')
+                .then((response) => this.todoList = response.data)
+                .catch((error) => console.error('Errore nella richiesta delete-all:', error));
+        },
     },
     mounted(){ 
         this.fetchTaskList();
