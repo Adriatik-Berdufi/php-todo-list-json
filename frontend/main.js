@@ -31,9 +31,14 @@ const app = createApp({
             axios.post('../backend/api/delete-item.php', { item, index })
                 .then((response) => {
                     this.todoList = response.data;
+                })    
+        },
+        doneItem(item,index){
+            axios.post('../backend/api/switch-done-item.php', { item, index })
+                .then((response) => {
+                    this.todoList = response.data;
                 })
-                
-        }
+        },
     },
     mounted(){ 
         this.fetchTaskList();

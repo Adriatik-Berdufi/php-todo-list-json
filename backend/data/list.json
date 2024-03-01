@@ -1,10 +1,14 @@
 [
     {
         "value": "sdasdas",
-        "done": false
+        "done": true
     },
     {
         "value": "sadas",
+        "done": false
+    },
+    {
+        "value": "dfaef",
         "done": false
     }
 ]

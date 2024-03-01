@@ -42,14 +42,14 @@
 								<div v-if="(item.done)" class="d-flex justify-content-between align-items-center">
 									<div class="w-75 text-start text-decoration-line-through">{{item.value}}</div>
 									<div class="">
-									<!-- <i @click="doneItem(item)" class="bi bi-check2-circle p-2 text-success"></i> -->
+									<i @click="doneItem(item,index)" class="bi bi-check2-circle p-2 text-success"></i>
 									<i @click="deleteItem(item,index)" class="bi bi-trash3 p-2 text-danger"></i>
 									</div>
 								</div>
 								<div v-if="(!item.done)" class="d-flex justify-content-between align-items-center">
 									<div class="w-75 text-start">{{item.value}}</div>
 									<div class="">
-									<!-- <i @click="doneItem(item)" class="bi bi-check2-circle p-2  text-danger"></i> -->
+									<i @click="doneItem(item,index)" class="bi bi-check2-circle p-2  text-danger"></i>
 									<i @click="deleteItem(item,index)" class="bi bi-trash3 p-2 text-danger"></i>
 									</div>
 								</div>
